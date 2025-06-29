@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.ggaidukk.collaborativeprose</groupId>
+  <artifactId>collaborative-prose</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>collaborative-prose</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>de.htw_berlin.fb4.examples</groupId>
+      <artifactId>prose_library</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.htw_berlin.fb4.proseapp_Shamanina</groupId>
+      <artifactId>prose-app</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>de.htw_berlin.fb4.ossd</groupId>
+      <artifactId>prose_builder</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>joha1na</id>
+      <url>https://maven.pkg.github.com/joha1na/my-prose-app</url>
+    </repository>
+
+    <repository>
+     <id>shamani</id>
+     <url>https://maven.pkg.github.com/sha-ma-ni/prose-app-deploy</url>
+    </repository>
+
+    <repository>
+      <id>prose-builder</id>
+      <url>https://maven.pkg.github.com/bs-jokri/prose-builder</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>org.ggaidukk.collaborativeprose.CollaborativeProse</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
